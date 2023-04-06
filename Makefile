@@ -15,10 +15,10 @@ compile: main.go
 	  tinygo build -target=wasi -o /home/tinygo/main.wasm
 
 build: main.wasm Dockerfile
-	docker buildx build --platform wasi/wasm32 -t ${IMAGE_TAG} .
+	docker buildx build --platform wasi/wasm -t ${IMAGE_TAG} .
 
 run:
 	docker run --rm \
 	  --runtime=${RUNTIME} \
-	  --platform=wasi/wasm32 \
+	  --platform=wasi/wasm \
 	  ${IMAGE_TAG}:latest
