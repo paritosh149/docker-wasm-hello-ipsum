@@ -13,7 +13,6 @@ Hello Ipsum
 
 ## Environments
 
-- Go 1.20
 - Docker Desktop v4.15+
 - Make
 
